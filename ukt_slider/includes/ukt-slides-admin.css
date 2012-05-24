@@ -1,0 +1,19 @@
+
+#wpwrap #icon-edit {
+	background: url('../images/slides-icon-32x32.png') no-repeat top left;
+}
+
+#edit-slug-box,
+#message a,
+#preview-action,
+.row-actions .view {
+	display: none;	
+}
+.span_error{
+	margin-left:10px;
+	position: absolute;
+	color:red;
+	font-weight:bold;
+	font-size:14px;
+	display:none;
+}
