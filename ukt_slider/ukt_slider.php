@@ -135,7 +135,7 @@ function ukt_slide_register_taxonomy() {
 	add_action( 'init', 'ukt_slide_register_taxonomy' );
 	if(is_admin())
 	{
-		require_once( '/includes/ukt-slides-admin.php' );
+		require_once(__DIR__.'/includes/ukt-slides-admin.php');
 	}
 	
 	add_shortcode("ukt_slideshow", "uktslide_handler");
@@ -154,7 +154,7 @@ function ukt_slide_register_taxonomy() {
 		ob_start();
 				
 		$ukt_slideshow_content = ob_get_clean();
-		require_once('/includes/ukt-slideshow.php');
+		require_once(__DIR__.'/includes/ukt-slideshow.php');
 		//send back text to calling function
 		return $ukt_slideshow_content;
 	}
