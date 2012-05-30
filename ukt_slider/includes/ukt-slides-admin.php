@@ -285,7 +285,9 @@ function ukt_slides_settings_link( $ukt_links, $ukt_file ) {
 	}
 	
 	function ukt_slides_settings_page(){
-		require_once( '/ukt-slides-settings.php' );
+		
+		require_once(__DIR__.'/ukt-slides-settings.php');
+		//require_once( '/ukt-slides-settings.php' );
 	}
 	
 	function ukt_slides_register_settings(){
