@@ -1,3 +1,8 @@
+// Get the slideshow options
+var slidespeed      = parseInt( uktsettings.uktslideshowspeed );
+var slidetimeout    = parseInt( uktsettings.uktslideshowduration );
+var slideheight     = parseInt( uktsettings.uktslideshowheight );
+
 jQuery(document).ready(function(){
 	var slideWidth = 923;
 	var currentPosition = 0;
@@ -9,7 +14,7 @@ jQuery(document).ready(function(){
 		
 	function start()
 	{
-		interval = setInterval(next, 4000);
+		interval = setInterval(next, slidetimeout);
 	}
   
     function next(){
@@ -18,20 +23,20 @@ jQuery(document).ready(function(){
 		{
 			jQuery('.ul_slideshow').stop(true).animate({
 			  'marginLeft' : slideWidth*(-currentPosition)
-			},1500);
+			},slidespeed);
 		}
 		else if(currentPosition == (numberOfSlides))
 		{
 			currentPosition = 0;
 			jQuery('.ul_slideshow').stop(true).animate({
 			  'marginLeft' : '0px'
-			},1500);
+			},slidespeed);
 		}
 		else
 		{		
 			jQuery('.ul_slideshow').stop(true).animate({
 			  'marginLeft' : slideWidth*(-currentPosition)
-			},1500);
+			},slidespeed);
 		}
 
 	}
@@ -40,7 +45,7 @@ jQuery(document).ready(function(){
 		clearInterval(interval);
 		var slideActive = jQuery(this).attr('id').split('_');
 		currentPosition = slideActive[1] - 1;
-		jQuery('.ul_slideshow').stop(true).animate({marginLeft: slideWidth*(-currentPosition)}, 1500);
+		jQuery('.ul_slideshow').stop(true).animate({marginLeft: slideWidth*(-currentPosition)}, slidespeed);
 		if(currentPosition == (numberOfSlides-1))
 		{
 			currentPosition = 0;

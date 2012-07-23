@@ -13,14 +13,6 @@
 		echo "<span class ='span_error' id='error_height'>ERROR</span>";
 	}
 	
-	function ukt_slides_slide_width() {
-		$ukt_px      = 'px';
-		$ukt_options = get_option('uktslides_options');
-		
-		echo "<input id='slide_width' name='uktslides_options[slide_width]' size='20' type='text' value='{$ukt_options['slide_width']}' /> $ukt_px";
-		echo "<span class ='span_error' id='error_width'>ERROR</span>";
-	}
-	
 	function ukt_slides_transition_speed() {
 		$ukt_seconds = 'seconds';
 		$ukt_options = get_option( 'uktslides_options' );
@@ -59,7 +51,6 @@
 	{
 		var ukt_quantity = document.getElementById("slideshow_quantity");
 		var ukt_height = document.getElementById("slide_height");
-		var ukt_width = document.getElementById("slide_width");
 		var ukt_speed = document.getElementById("transition_speed");
 		var ukt_duration = document.getElementById("slide_duration");
 		var reg1 = /^[0-9]{1,3}$/i;
@@ -68,11 +59,6 @@
 		if(!(ukt_height.value.match(reg1))){
 			document.getElementById("error_height").style.display = "inline";
 			ukt_height.value="";
-			bad_field = 1;
-		}
-		if(!(ukt_width.value.match(reg2))){
-			document.getElementById("error_width").style.display = "inline";
-			ukt_width.value="";
 			bad_field = 1;
 		}
 		if(!(ukt_speed.value.match(reg2))){

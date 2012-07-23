@@ -294,7 +294,6 @@ function ukt_slides_settings_link( $ukt_links, $ukt_file ) {
 		register_setting( 'uktslides_options', 'uktslides_options' );
 		add_settings_section( 'ukt_slideshow', 'Configure Slideshow', 'ukt_slides_section_text', 'uktslides' );
 		add_settings_field( 'slide_height', 'Slide Height', 'ukt_slides_slide_height', 'uktslides', 'ukt_slideshow' );
-		add_settings_field( 'slide_width', 'Slide Width', 'ukt_slides_slide_width', 'uktslides', 'ukt_slideshow' );
 		add_settings_field( 'transition_speed', 'Transition Speed', 'ukt_slides_transition_speed', 'uktslides', 'ukt_slideshow' );
 		add_settings_field( 'slide_duration', 'Slide Duration', 'ukt_slides_slide_duration', 'uktslides', 'ukt_slideshow' );
 	}

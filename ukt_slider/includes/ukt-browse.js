@@ -23,8 +23,8 @@ jQuery(document).ready(function() {
 			imgurl = jQuery('img',html).attr('src');
 			jQuery('#upload_image').val(imgurl);
 			tb_remove();
-		}		 		 
-		tb_show('', 'media-upload.php?post_id=1&amp;type=image&amp;TB_iframe=true');
+		}
+		tb_show('', 'media-upload.php?post_id=0&amp;type=image&amp;TB_iframe= true');
 		return false;
 	});
 	 
@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 			jQuery('#upload_image2').val(imgurl);
 			tb_remove();
 		}
-		tb_show('', 'media-upload.php?post_id=1&amp;type=image&amp;TB_iframe=true');
+		tb_show('', 'media-upload.php?post_id=0&amp;type=image&amp;TB_iframe= true');
 		return false;
 	});
 		
@@ -43,8 +43,8 @@ jQuery(document).ready(function() {
 			imgurl = jQuery('img',html).attr('src');
 			jQuery('#upload_image3').val(imgurl);
 			tb_remove();
-		}		 
-		tb_show('', 'media-upload.php?post_id=1&amp;type=image&amp;TB_iframe=true');
+		}
+		tb_show('', 'media-upload.php?post_id=0&amp;type=image&amp;TB_iframe= true');
 		return false;
 	});
 	
